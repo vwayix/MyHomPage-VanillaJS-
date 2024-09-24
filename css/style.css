@@ -1,35 +1,41 @@
 /* 데스크탑 */
-body{
+*{
     margin: 0;
+    padding: 0;
 }
-
-
 .header{ /* 모든 헤더 */
-    height: 100px;
+    height: 90px;
     width: 100%;
-    background-color: #001F3F;
+    background-color: #1A2B48;
     position: sticky;
     display: flex;
     align-items: center;
-    justify-content: center;
-    top:0;
+    top: 0;
 }
-.header ul{
+#logo{
+    margin-left: 72px;
     width: 100%;
+    font-size: 35px;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+.header nav{
+    width: 655px;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-}
-.menu li{
     color: white;
-    text-decoration: none;
-    padding: 0 20px;
-    font-size: 18px;
-    position: relative;
+    margin-left: 530px;
 }
-.menu li::after {
+.header nav a{
+    margin-left:0 0px;
+    padding: 0 20px;
+    font-size: 24px;
+    position: relative;
+    width: 120px;
+}
+.header nav a::after {
     content: '';
     position: absolute;
     right: 0;
@@ -38,93 +44,85 @@ body{
     width: 1px;
     background-color: #ccc;
 }
-.menu li:last-child::after {
+.header nav a:last-child::after {
     display: none; /* 마지막 항목에는 오른쪽 선을 제거 */
 }
-.menu li:hover {
-    color: #f0f0f0; /* 메뉴 항목에 호버 효과 */
+nav a:link, nav a:visited{
+    color: inherit;
+    text-decoration: none;
 }
-#logo, .menu, #menuentt, #login{
-    height: 70px;
+.header button{
+    width: 150px;
+    height: 65px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+#logo, nav, nav a, .login{
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#logo{
-    margin-right: 800px;
-    width: 120px;
-    font-size: 35px;
-    color: #f0f0f0;
+.login{
+    margin-left: 50px;
 }
-.menu{
-    display: flex;
-    margin-right: 100px;
-    background-color: #001F3F;
+#signIn{
+    padding: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
 }
-#menuentt{
-    width: 120px;
-    color: #ffff;
-}
-#login {
-    width: 150px;
-    border-radius: 25px;
+#signUp {
+    margin-right: 0px;
+    padding: 20px;
+    border-radius: 500px;
     background-color: #5AB7FF;
     color: #1C2833;
+    font-size: 24px;
+    text-decoration: none;
 }
-#login:hover{
+#signUp:hover{
     background-color: #499FCC;
 }
-a:link, a:visited{
+.login :link, .login:visited{
     color: inherit;
     text-decoration: none;
 }
 
-
 .main{ /* 홈페이지 메인 */
-    height: 780px;
+    height: 785px;
     width: 100%;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     margin: 0 auto;
 }
-.text{
-    margin-left: 10px;
-    width: 1051px;
-    display: flex;
-    
-}
-.main-text{
-    margin-top: 180px;
+.notion{
     display: inline-block;
+    width: 1300px;
+    text-align: left;
+    margin-top: 170px;
 }
-.main h1{
+.notion h1{
     color: #607D8B;
-    font-size: 30px;
+    font-size: 40px;
 }
-.main p{
+#title{
+    font-size: 32px;
     color: #001F3F;
-    font-size: 30px;
+    margin-bottom: 50px;
 }
-.side{ /* 홈페이지 사이드 */
-    height: 840px;
-    width: 100%;
-    background-color: #607D8B;
-    display: flex;
-    justify-content: center;
-}
-.side-text{
-    margin-top: 250px;
-    display: inline-block;
-}
-.side h1, .side p{
-    color: #ffffff;
-    font-size: 30px;
+.notion p{
+    color: black;
+    font-size: 20px;
 }
 .footer{ /* 홈페이지 푸터 */
-    height: 100px;
+    height: 70px;
     width: 100%;
-    background-color: #001F3F;
+    background-color: #1A2B48;
     position: absolute;
     display: flex;
     align-items: center;
@@ -371,3 +369,48 @@ h2{
     width: 100%;
     background-color: #607D8B;
 }
+
+.list-main{ /* 프로젝트 메인 */
+    height: 100%;
+    width: 100%;
+    background-color: #232323;
+    display: flex;
+    margin: 0;
+}
+
+.sidebar{
+    height: 980px;
+    width: 300px;
+    background-color: #CBCBCB;
+    display: inline-block;
+}
+.side-top{
+    display: inline-block;
+}
+.side-top button{
+    background-color: #2b7cff;
+    height: 50px;
+    width: 200px;
+    color:white;
+}
+.side-top div{
+    display: flex;
+    justify-content: space-between;
+}
+.side-top img{
+    height: 30px;
+    width: 30px;
+    background-color: #232323;
+}
+.side-buttom{
+    display: inline-block;
+}
+.sidebar-item{
+    display: flex;
+}
+.sidebar-item img{
+    width: 40px;
+    height: 40px;
+    background-color: #232323;
+}
+
