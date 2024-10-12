@@ -1,93 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>    
-        <meta charset="utf-8">
-        <title>자기소개</title>
-        <link rel="stylesheet" href="./css/css.css">
-        <link rel="icon" href="./img/title.png" type="image/x-icon">
-    </head>
-    <body>
-        <section class="header">
-            <div>
-                <a id="logo" href="index.html">VWAYIX</a>
-            </div>
-            <nav>
-                <a href="channel.html">보유스킬</a>
-                <a href="project.html">프로젝트</a>
-                <a href="list.html">게시판</a>
-            </nav>
-            <div><button onclick="">KR/EN</button></div>
-            <div class="login">    
-                <a id="signIn" href="signIn.html">로그인</a>
-                <a id="signUp" href="signUp.html">회원가입</a>
-            </div>
-        </section>
-            <section class="channel-main">
-                <div class="container"> <!--정보항목모두-->
-                    <div class="my-infor"> 
-                        <div class="skillbox">
-                            <div id="box">
-                                <h3>ABOUT ME</h3>
-                                <p>2006.05.19<br>부산컴퓨터과학고등학교졸업예정</p>
-                            </div>
-                            <div id="box">
-                                <h3>수상경력</h3>
-                                <p>없음</p>
-                            </div>
-                        </div>
-                        <div class="skillbox">
-                            <div id="box">
-                                <h3>CHANNEL</h3>
-                                <p>깃허브</p>
-                            </div>
-                            <div id="box">
-                                <h3>자격증</h3>
-                                <p>컴퓨터활용능력2급</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">보유스킬</div>
-                    <div class="skill-infor">
-                        <div class="skillbox">
-                            <div id="box">
-                                <h3>FRONT-END</h3>
-                                <p>HTML, CSS, JAVASCRIPT</p>
-                            </div>
-                            <div id="box">
-                                <h3>DB</h3>
-                                <p>MYSQL</p>
-                            </div>
-                            <div id="box">
-                                <h3>프로그래밍언어들</h3>
-                                <p>C언어, JAVA, 파이썬</p>
-                            </div>
-                            <div id="box">
-                                <h3>TOOLS</h3>
-                                <p>VSCODE, 이클립스, DEV C++</p>
-                            </div>
-                        </div>
-                        <div class="skillbox">
-                            <div id="box">
-                                <h3>BACK-END</h3>
-                                <p>미공개</p>
-                            </div>
-                            <div id="box">
-                                <h3>Server</h3>
-                                <p>Apache, Apache tomcat</p>
-                            </div>
-                            <div id="box">
-                                <h3>Mobile</h3>
-                                <p>미공개</p>
-                            </div>
-                            <div id="box">
-                                <h3>Collaboration<br>Design & Document</h3>
-                                <p>노션, 깃허브, 피그마, 파워포인트, 엑셀, 한글</p>
-                            </div>
-                        </div>
-                    </div>
+<head>
+    <meta charset="utf-8">
+    <title>자기소개</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="icon" href="./img/title.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div>
+            <strong><a id="logo" href="index.html">VWAYIX</a></strong>
+        </div>
+        <div class="list">
+            <span><a href="channel.html">보유스킬</a></span>
+            <span><a href="project.html">프로젝트</a></span>
+        </div>
+        <span><button onclick="">KR/EN</button></span>
+        <span class="login">
+            <a id="signIn" href="signIn.html">로그인</a>
+            <span id="signUp">
+                <a href="signUp.html">회원가입</a>
+            </span>
+        </span>
+    </header>
+    <main>
+        <div class="inline">
+            <div class="flex">
+                <div>
+                    <h3>ABOUT ME</h3>
+                    <p>2006.05.19<br>부산컴퓨터과학고등학교졸업예정</p>
                 </div>
-           </section>
-           <section class="channel-footer">
-           </section>
-    </body>
+                <div>
+                    <h3>CHANNEL</h3>
+                    <p>깃허브</p>
+                </div>
+                <div>
+                    <h3>자격증</h3>
+                    <p>컴퓨터활용능력2급</p>
+                </div>
+            </div>
+            <div class="line">보유스킬</div>
+            <div class="flex">
+                <div>
+                    <h3>FRONT-END</h3>
+                    <p>HTML, CSS, JAVASCRIPT</p>
+                </div>
+                <div>
+                    <h3>Framework</h3>
+                    <p>Node.js, React.js, Next.js</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div>
+                    <h3>BACK-END</h3>
+                    <p>미공개</p>
+                </div>
+                <div>
+                    <h3>DB</h3>
+                    <p>MongoDB, MySQL</p>
+                </div>
+                <div>
+                    <h3>Server</h3>
+                    <p>Apache, Apache tomcat</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div>
+                    <h3>TOOLS</h3>
+                    <p>VSCODE, 이클립스, DEV C++</p>
+                </div>
+                <div>
+                    <h3>프로그래밍언어들</h3>
+                    <p>C언어, JAVA, 파이썬</p>
+                </div>
+                <div>
+                    <h3>Collaboration<br>Design & Document</h3>
+                    <p>노션, 깃허브, 피그마, 파워포인트, 엑셀, 한글</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
