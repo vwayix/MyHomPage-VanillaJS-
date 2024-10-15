@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    border: none;
 }
 header{ /* 모든 헤더 */
     height: 80px;
@@ -10,6 +11,7 @@ header{ /* 모든 헤더 */
     position: sticky;
     display: flex;
     align-items: center;
+    top:0;
 }
 #logo{
     margin-left: 65px;
@@ -18,15 +20,13 @@ header{ /* 모든 헤더 */
     color: #f0f0f0;
     text-decoration: none;
 }
-
 .list{
-    width: 655px;
+    width: 309px;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    margin-left: 530px;
 }
 .list span{
     padding: 0 20px;
@@ -49,7 +49,6 @@ header{ /* 모든 헤더 */
     text-decoration: none;
     font-size: 24px;
 }
-
 header button{
     width: 150px;
     height: 65px;
@@ -60,7 +59,6 @@ header button{
     color: white;
     border-radius: 25px;
 }
-
 #logo, .login{
     height: 50px;
     display: flex;
@@ -68,7 +66,7 @@ header button{
     align-items: center;
 }
 .login{
-    width: 245px;
+    width: 240px;
     height: 63px;
     margin-left: 50px;
     background-color: #4f4f4f;
@@ -97,47 +95,49 @@ header button{
     align-items: center;
     justify-content: center;
 }
-
-.login :link, .login:visited{
+.login:link, .login:visited{
     color: inherit;
     text-decoration: none;
 }
+.array{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 900px;
+}
 
 
-
-
-main{ /* 홈페이지 메인 */
-    height: 100% auto;
+main{ /* 모든 메인 */
+    height: 100%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: white;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
 }
 .notion{
     display: inline-block;
     width: 1300px;
     text-align: left;
-    margin-top: 170px;
+    margin-top: 235px;
+    margin-bottom: 279px;
 }
 .notion h1{
-    color: #607D8B;
+    color:black;
     font-size: 40px;
 }
 #title{
     font-size: 32px;
-    color: #001F3F;
+    color: black;
     margin-bottom: 50px;
 }
 .notion p{
     color: black;
     font-size: 20px;
 }
+
 .footer{ /* 홈페이지 푸터 */
-    height: 70px;
+    height: 50px;
     width: 100%;
-    background-color: #1A2B48;
-    position: absolute;
+    background-color: rgb(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,66 +149,72 @@ main{ /* 홈페이지 메인 */
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.my-infor, .skill-infor{
+.my-infor{ /* 자기소개 */
     display: flex;
-    text-align: left;
+    justify-content: space-between;
+    width: 1020px;
+    margin-top: 50px;
 }
-.inline {
+.my-infor div{
+    width: 250px;
+    height: 140px;
+    background-color: #D9D9D9;
+    border-radius: 100px;
+    display: inline-block;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.my-infor h3, .skill-infor h3{
+    font-size: 24px;
+}
+.my-infor p, .skill-infor p{
+    font-size: 20px;
+}
+.skill-infor{
     display: inline-block;
 }
-.flex{
+.flex1, .flex2, .flex3{
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 1020px;
 }
-.flex div{
-    height: 192px;
-    width: 452px;
+.flex1 div{
+    width: 430px;
+    height: 140px;
     background-color: #D9D9D9;
-    border-radius: 30px;
-    margin: 70px;
-    padding-left: 40px;
-    padding-top: 30px
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
-#box h3{
-    font-size: 25px;
-    margin-bottom: 0;
-    margin-top: 0px;
+.flex2 div, .flex3 div{
+    width: 250px;
+    height: 140px;
+    background-color: #D9D9D9;
+    display: inline-block;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: left;
 }
-#box p{
-    font-size: 20px;
-    margin-top: 10px;
+.flex2{
+    margin-bottom: 50px;
+
 }
 .line{ 
+    width: 1020px;
+    height: 100px;
     display: flex;
     align-items: center;
     text-align: center;
     color:black;
+    font-size: 24px;
 }
 .line::before, .line::after {
     content: '';
@@ -223,12 +229,61 @@ main{ /* 홈페이지 메인 */
 }
 
 
+.frame{
+    display: inline-block;
+    margin-top:60px;
+    margin-bottom: 60px;
+}
+.blue-box, .green-box, .gray-box{
+    background-color:inherit;
+    width: 1252px;
+    height: 330px;
+    border-radius: 30px;
+    padding: 40px;
+    display: inline-block;
+    box-shadow: 35px 40px 15px -3px rgba(0, 0, 0, 0.3);
+    margin-left: 284px;
+    text-align: center;
 
-
-
-
-
-
+    overflow-x: auto; /* 가로 스크롤 활성화 */
+    white-space: nowrap; /* 콘텐츠를 한 줄로 유지 */
+    border: 1px solid #ccc;
+}
+.blue-box{
+    background-color: #4A90E2;
+}
+.green-box{
+    background-color: #81E05F;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.gray-box{
+    background-color: #BDC3C7;
+}
+.title{
+    font-size: 40px;
+    text-align: center;
+}
+.contentbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.contentbox div{
+    display: inline-block;
+}
+.contentbox img{
+    width: 300px;
+    height: 150px;
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+.contentbox p{
+    color: 40px;
+    font-size: 20px;
+}
 
 
 .login-main{ /* 로그인 메인 */
@@ -322,72 +377,4 @@ h2{
 .social-login a img {
     width: 30px;
     height: 30px;
-}
-.login-footer{ /* 로그인 푸터 */
-    height: 65px;
-    width: 100%;
-    background-color: #607D8B;
-}
-
-.containerbox{
-    width: 1920px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.blue-box, .green-box, .gray-box{
-    background-color:inherit;
-    width: 1252px;
-    height: 330px;
-    border-radius: 30px;
-    padding: 40px;
-    display: inline-block;
-    box-shadow: 35px 40px 15px -3px rgba(0, 0, 0, 0.3);
-    margin-left: 284px;
-}
-.blue-box{
-    background-color: #4A90E2;
-}
-.green-box{
-    background-color: #81E05F;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-.gray-box{
-    background-color: #BDC3C7;
-}
-.title{
-    display: flex;
-    font-size: 40px;
-    text-align: left;
-    margin-left: 30px;
-}
-.contentbox{
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-}
-.contentbox div{
-    margin: 20px;
-    display: inline-block;
-}
-.contentbox img{
-    width: 300px;
-    height: 150px;
-    background-color: #D9D9D9;
-    border-radius: 30px;
-    box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.3);
-}
-.contentbox p{
-    margin:0;
-    color: 40px;
-    text-align: center;
-    font-size: 20px;
-}
-.contentbox button{
-    background-color: #4F4F4F;
-    color: white;
-    padding: 30px;
-    border-radius: 30px;
-    font-size: 50px;
-    margin-left: 80px;
 }
