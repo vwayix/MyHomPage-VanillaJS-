@@ -229,13 +229,14 @@ main{ /* 모든 메인 */
 }
 
 
-.frame{
+.frame {/* 프로젝트 */
+    
     display: inline-block;
-    margin-top:60px;
+    margin-top: 60px;
     margin-bottom: 60px;
 }
-.blue-box, .green-box, .gray-box{
-    background-color:inherit;
+.blue-box, .green-box, .gray-box {
+    background-color: inherit;
     width: 1252px;
     height: 330px;
     border-radius: 30px;
@@ -244,45 +245,71 @@ main{ /* 모든 메인 */
     box-shadow: 35px 40px 15px -3px rgba(0, 0, 0, 0.3);
     margin-left: 284px;
     text-align: center;
-
-    overflow-x: auto; /* 가로 스크롤 활성화 */
-    white-space: nowrap; /* 콘텐츠를 한 줄로 유지 */
-    border: 1px solid #ccc;
 }
-.blue-box{
+.blue-box {
     background-color: #4A90E2;
 }
-.green-box{
+.green-box {
     background-color: #81E05F;
     margin-top: 60px;
     margin-bottom: 60px;
 }
-.gray-box{
+.gray-box {
     background-color: #BDC3C7;
 }
-.title{
+.title {
     font-size: 40px;
     text-align: center;
 }
-.contentbox{
+.scroll-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 30px;
 }
-.contentbox div{
+.scroll-array{
     display: inline-block;
+    width: 1200px;
+    /* 컨테이너 너비 */
+    overflow-x: auto;
+    /* 가로 스크롤 활성화 */
+    white-space: nowrap;
+    padding-bottom: 50px;
 }
-.contentbox img{
-    width: 300px;
+.scroll-item {
+    display: inline-block;
+    /* 아이템 각각의 너비 */
+    margin-right: auto;
+    text-align: center;
+    line-height: 30px;
+}
+.scroll-item img {
+    width: 250px;
     height: 150px;
     background-color: #D9D9D9;
     border-radius: 30px;
     box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
-.contentbox p{
+.scroll-item p {
     color: 40px;
     font-size: 20px;
+}
+.scroll-array::-webkit-scrollbar {
+    width: 12px;  /* 세로 스크롤바의 너비 */
+    height: 12px; /* 가로 스크롤바의 높이 */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #888;  /* 스크롤 핸들의 기본 색상 */
+    border-radius: 10px;     /* 둥근 모서리 */
+    border: 2px solid #e0e0e0;  /* 스크롤 핸들 테두리 */
+}
+.scroll-array::-webkit-scrollbar-thumb:hover {
+    background-color:gray;  /* 호버 시 색상 변경 */
+    border-radius: 20px;
+}
+.scroll-array::-webkit-scrollbar-track {
+    background-color: #e0e0e0;  /* 트랙의 배경색 */
+    border-radius: 10px;        /* 트랙 모서리 둥글게 */
 }
 
 
