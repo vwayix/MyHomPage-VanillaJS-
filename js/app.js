@@ -1,18 +1,3 @@
-function displayClassNames() {
-    // coworkerList 클래스를 가진 모든 ul 요소를 선택
-    var coworkerLists = document.querySelectorAll(".coworkerList");
-
-    // 각 ul 요소에 대해 반복문 실행
-    coworkerLists.forEach(function (ul) {
-        // 클래스 이름을 <p>로 출력
-
-
-        var classItem = document.createElement("p");
-        classItem.textContent = "클래스 이름: " + ul.className; // 클래스 이름 설정
-        document.body.appendChild(classItem); // body에 <p> 요소 추가
-    });
-}
-
 const myInfor = document.querySelector(".my-infor");
 const skillInfor = document.querySelector(".skill-infor");
 
