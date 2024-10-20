@@ -3,7 +3,6 @@ const skillInfor = document.querySelector(".skill-infor");
 
 const myTitle = ['About Me', 'CHANNEL', '자격증'];
 let myData = [['2006.05.19'], ['부산컴퓨터과학고등학교졸업예정'], ['깃허브'], ['컴퓨터활용능력2급']];
-
 const skillTitle = {
     flex1: ['FrontEnd', 'Framework'],
     flex2: ['BackEnd', 'DB', 'Server'],
@@ -19,13 +18,12 @@ let skillData = {
 let myContent = '';
 for (let i = 0; i < 3; i++) {
     if (i < 1) {
-        myContent += '<div><h3>' + myTitle[i] + '</h3><p>' + myData[i] + '</p><br><p>' + myData[i + 1] + '</p></div>';
+        myContent = '<div><h3>' + myTitle[i] + '</h3><p>' + myData[i] + '</p><br><p>' + myData[i + 1] + '</p></div>';
     } else {
-        myContent += '<div><h3>' + myTitle[i] + '</h3><p>' + myData[i + 1] + '</p></div>';
+        myContent = '<div><h3>' + myTitle[i] + '</h3><p>' + myData[i + 1] + '</p></div>';
     }
+    myInfor.innerHTML = myContent;
 }
-myInfor.innerHTML = myContent;
-
 //skillInfor
 for (var i = 1; i <= 3; i++) {
     var newDiv = document.createElement('div');
@@ -49,19 +47,121 @@ for (var i = 1; i <= 3; i++) {
         default:
     }
 }
-/* 
-<h1>Loop & Array</h1>
-<script>
-    var coworkers = ['egoing', 'leezche', 'duru', 'taeho'];
-</script>
-<h2>Co workers</h2>
-<ul>
-    <script>
-        var i = 0;
-        while(i < coworkers.length){
-            document.write('<li><a href="http://a.com/'+coworkers[i]+'">'+coworkers[i]+'</a></li>');
-            i = i + 1;
-        }
-    </script>
-</ul>
+
+/*<div class="scroll-array">
+    <div class="scroll-item">
+        <img></img>
+        <p>제목</p>
+    </div>
+    <div class="scroll-item">
+        <img></img>
+        <p>제목</p>
+    </div>
+    <div class="scroll-item">
+        <img></img>
+        <p>제목</p>
+    </div>
+    <div class="scroll-item">
+        <img></img>
+        <p>제목</p>
+    </div>
+    <div class="scroll-item">
+        <img></img>
+        <p>제목</p>
+    </div>
+</div>*/
+
+
+/*div에 scroll-array인 클래스이름을 만들고 O
+안에 여러개의 div에 scroll-item인 클래스 만들건데 
+그안에 img, p태그를 만드는데 여러개 만들거니까
+조건을 배열의 크기만큼 반복해서 만들기 
 */
+const scrollContainer = bluebox.querySelector('.scroll-container');
+
+pjDiv.className = 'scroll-array';
+
+let content = {
+    bluebox: [['이미지주소', '이미지주소', '이미지주소', '이미지주소', '이미지주소'], ['제목', '제목', '제목', '제목', '제목']],
+    greenbox: [['이미지주소', '이미지주소', '이미지주소', '이미지주소', '이미지주소'], ['제목', '제목', '제목', '제목', '제목']],
+    graybox: [['이미지주소', '이미지주소', '이미지주소', '이미지주소', '이미지주소'], ['제목', '제목', '제목', '제목', '제목']]
+}
+const boxName = [content['bluebox'], content['greenbox'], content['graybox']];
+
+for(let i=1; i<=3; i++){
+    const pjDiv = document.createElement('div');
+    pjDiv.className = boxName[i];
+switch (pjDiv.className) {
+    case content['bluebox']:
+        for (let i = 0; i < tageImg.length; i++) {
+            const pjItem = document.createElement('div');
+            pjItem.className = 'scroll-item';
+        
+            // img 태그 생성
+            const img = document.createElement('img');
+            img.src = content['bluebox'][i][i];
+        
+            // p 태그 생성
+            const p = document.createElement('p');
+            p.textContent = content['bluebox'][i][i];
+        
+            // pjItem에 img와 p 태그 추가
+            pjItem.appendChild(img);
+            pjItem.appendChild(p);
+        
+            // pjDiv에 pjItem 추가
+            pjDiv.appendChild(pjItem);
+            
+        }
+        break;
+    case content['greenbox']:
+        for (let i = 0; i < tageImg.length; i++) {
+            const pjItem = document.createElement('div');
+            pjItem.className = 'scroll-item';
+        
+            // img 태그 생성
+            const img = document.createElement('img');
+            img.src = content['greenbox'][i][i];
+        
+            // p 태그 생성
+            const p = document.createElement('p');
+            p.textContent = content['greenbox'][i][i];
+        
+            // pjItem에 img와 p 태그 추가
+            pjItem.appendChild(img);
+            pjItem.appendChild(p);
+        
+            // pjDiv에 pjItem 추가
+            pjDiv.appendChild(pjItem);
+        }
+        break;
+    case content['graybox']:
+        for (let i = 0; i < tageImg.length; i++) {
+            const pjItem = document.createElement('div');
+            pjItem.className = 'scroll-item';
+        
+            // img 태그 생성
+            const img = document.createElement('img');
+            img.src = content['greenbox'][i][i];
+        
+            // p 태그 생성
+            const p = document.createElement('p');
+            p.textContent = content['greenbox'][i][i];
+        
+            // pjItem에 img와 p 태그 추가
+            pjItem.appendChild(img);
+            pjItem.appendChild(p);
+        
+            // pjDiv에 pjItem 추가
+            pjDiv.appendChild(pjItem);
+        }
+        break;
+    default: alert("프로젝트를 가져오지 못하였습니다.")
+}
+scrollContainer.appendChild(pjDiv);
+
+}
+
+// 최종적으로 scrollContainer에 pjDiv 추가
+scrollContainer.appendChild(pjDiv);
+
