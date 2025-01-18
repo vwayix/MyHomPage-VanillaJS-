@@ -8,61 +8,90 @@
 </head>
 
 <body>
-    <main>
-        <div class="menu">
-            <button id="menu-btn">메뉴</button>
-            <button id="hom-btn" class="action" hidden>홈페이지</button>
-            <button id="skill-btn" hidden>보유스펙</button>
-            <button id="project-btn" hidden>프로젝트</button>
+    <div class="menu">
+        <button id="menu-btn">메뉴</button>
+        <button id="hom-btn" class="action" hidden>홈페이지</button>
+        <button id="skill-btn" hidden>보유스펙</button>
+        <button id="project-btn" hidden>프로젝트</button>
+    </div>
+    <section id="hom">
+        <div id="main-text">
+            <h2>FrontEnd Developer</h2>
+            <p>이 웹사이트는 제가 웹 개발을 공부하며 배운 내용을 활용해 다양한
+                프로젝트를 제작하고, 그 결과물을 기록하고 공유하는 공간입니다.
+                직접 웹을 만들고 여러 프로젝트를 수행하면서 실력을 키우고 새로운 기술을
+                익히며 그 과정에서 완성된 프로젝트와 경험을 기록한 포트폴리오입니다.
+                앞으로 더 많은 실습과 프로젝트를 통해 웹 개발자로 성장하는 모습을 이곳에
+                기록할 예정입니다. 감사합니다!</p>
         </div>
-
-        <section id="hom">
-            <div id="main-text">
-                <h2>FrontEnd Developer</h2>
-                <p>이 웹사이트는 제가 웹 개발을 공부하며 배운 내용을 활용해 다양한
-                    프로젝트를 제작하고, 그 결과물을 기록하고 공유하는 공간입니다.
-                    직접 웹을 만들고 여러 프로젝트를 수행하면서 실력을 키우고 새로운 기술을
-                    익히며 그 과정에서 완성된 프로젝트와 경험을 기록한 포트폴리오입니다.
-                    앞으로 더 많은 실습과 프로젝트를 통해 웹 개발자로 성장하는 모습을 이곳에
-                    기록할 예정입니다. 감사합니다!</p>
-            </div>
-        </section>
-        <section id="skill">
-            <h2>보유스펙</h2>
-            <div id="skill-img-container">
+    </section>
+    <section id="skill">
+        <h2>보유스펙</h2>
+        <div id="skill-img-container">
             <ul id="skill-imgs">
 
             </ul>
+        </div>
+        <div id="skill-container">
+            <div id="leftBox">
+                <h2>Skill</h2>
+                <ul id="skills">
+
+                </ul>
             </div>
-            <div id="skill-container">
-                    <div id="leftBox">
-                        <h2>Skill</h2>
-                        <ul id="skills">
+            <div id="rightBox">
+                <div id="certificate">
+                    <h2>Certificate</h2>
+                    <ul id="certificates">
 
-                        </ul>
-                    </div>
-                    <div id="rightBox">
-                        <div id="certificate">
-                            <h2>Certificate</h2>
-                            <ul id="certificates">
+                    </ul>
+                </div>
+                <div id="tools">
+                    <h2>Editors and Tools</h2>
+                    <ul id="editors">
 
-                            </ul>
-                        </div>
-                        <div id="tools">
-                            <h2>Editors and Tools</h2>
-                            <ul id="editors">
-
-                            </ul>
-                        </div>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <section id="project">
-            <div id="project-container">
-                <h2>WEB프로젝트</h2>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+    <section id="project">
+        <div id="project-container">
+            <h2>WEB프로젝트</h2>
+            <ul id="project-list">
+                <li>
+                    <div class="project">
+                        <img src="images/project1.png">
+                        <h3>프로젝트1</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="project">
+                        <img src="images/project1.png">
+                        <h3>프로젝트1</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="project">
+                        <img src="images/project1.png">
+                        <h3>프로젝트1</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="project">
+                        <img src="images/project1.png">
+                        <h3>프로젝트1</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="project">
+                        <img src="images/project1.png">
+                        <h3>프로젝트1</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
     <script src="app.js" type="module"></script>
 </body>
 

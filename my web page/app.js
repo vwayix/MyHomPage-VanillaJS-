@@ -1,11 +1,20 @@
 import { skillData, certificateData, editorData } from './data/skillData.js';
 document.addEventListener('DOMContentLoaded', () => {
-    menuOpen();
     scrollToHome();
+    PageNavigation();
     component();
-    handleScroll()
 });
-function menuOpen() {
+function PageNavigation(){
+    menuBtn();
+    window.addEventListener('scroll', updateActiveButton);
+}
+function scrollToHome() {
+    const homeSection = document.getElementById('hom');
+    if (homeSection) {
+        homeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+function menuBtn() {
     const menuBtn = document.querySelector('#menu-btn');
     const menuBtns = document.querySelectorAll('.menu button');
     const homBtn = document.querySelector('#hom-btn');
@@ -28,13 +37,14 @@ function menuOpen() {
     menuBtn.addEventListener('click', () => { //메뉴리스트들 보이게 또는 안보이게하는 코드
         if (menuBtn.innerText === "메뉴") {
             menuBtn.innerText = "메뉴닫기";
+            updateActiveButton();
             menuBtns.forEach((element) => {
                 element.removeAttribute('hidden');
                 if (element.id === saveBtn) { //클릭햇던 버튼 다시 색넣기
                     element.classList.add('action');
                 }
             });
-            if (saveBtn === null || isFirstClick) {
+            if (saveBtn === null && isFirstClick) {
                 homBtn.classList.add('action'); // 홈페이지 버튼에 action 클래스 추가
                 isFirstClick = false; // 첫 클릭 이후에는 이 코드가 실행되지 않도록 설정
             }
@@ -45,16 +55,32 @@ function menuOpen() {
                     element.setAttribute('hidden', '');
                 } else {
                     homBtn.classList.remove('action'); //menu-btn맞으면 지우래
+                    saveBtn = null;
                 }
             });
         };
     });
 }
-function scrollToHome() {
-    const homeSection = document.getElementById('hom');
-    if (homeSection) {
-        homeSection.scrollIntoView({ behavior: 'smooth' });
-    }
+
+function updateActiveButton() {
+    const sections = document.querySelectorAll('section');
+    const menuBtns = document.querySelectorAll('.menu button');
+    let currentSection = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    menuBtns.forEach(btn => {
+        btn.classList.remove('action');
+        if (btn.id === `${currentSection}-btn`) {
+            btn.classList.add('action');
+        }
+    });
 }
 
 function component() {
@@ -97,42 +123,7 @@ function component() {
         li.classList.add('box');
         editors.appendChild(li);
     });
-    
-    /*skillData.forEach((item) => {
-        const img = document.createElement('img');
-        const li = document.createElement('li');
-        img.src = item.img;
-        img.alt = item.name;
-        console.log(img.src);
-        li.appendChild(img);
-        ImgContainer.appendChild(li);
-    });*/
 }
-
-function handleScroll() {
-    window.addEventListener('scroll', updateActiveButton);
-}
-
-/*function updateActiveButton() {
-    const sections = document.querySelectorAll('section');
-    const menuBtns = document.querySelectorAll('.menu button');
-    let currentSection = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-
-    menuBtns.forEach(btn => {
-        btn.classList.remove('action');
-        if (btn.id === `${currentSection}-btn`) {
-            btn.classList.add('action');
-        }
-    });
-}*/
 
 function createSnowflake() {
     const snowflake = document.createElement('div');
