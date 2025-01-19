@@ -6,37 +6,37 @@ const skillData = [
     },
     {
         name: 'CSS3',
-        level: '85%',
+        level: '90%',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
     },
     {
         name: 'JavaScript(ES6)',
-        level: '90%',
+        level: '85%',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
     }, 
     {
         name: 'React.js',
-        level: '90%',
+        level: '70%',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     },
     {
         name: 'Vue.js',
-        level: '55%',
+        level: '0%',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
     },
     {
         name: 'three.js',
-        level: '55%',
+        level: '0%',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg',
     }, 
     {
         name: 'typescript',
-        level: '95%',
+        level: '0%',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
     },
     {
         name: 'Next.js',
-        level: '85%',
+        level: '0%',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
     },
     {
@@ -45,10 +45,10 @@ const skillData = [
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg',
     },
     {
-        name: 'taillwindcss',
-        level: '20%',
-        img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
-    }
+    name: 'webpack',
+    level: '0%',
+    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg',
+    },
 ];
 const certificateData = [
     {
@@ -66,6 +66,10 @@ const editorData = [
     {
         name: 'VSCode',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+    },
+    {
+        name: 'Figma',
+        img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
     },
     {
         name: 'Figma',

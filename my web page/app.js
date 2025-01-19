@@ -1,18 +1,19 @@
 import { skillData, certificateData, editorData } from './data/skillData.js';
 document.addEventListener('DOMContentLoaded', () => {
-    scrollToHome();
+    RefreshPage();
     PageNavigation();
-    component();
+    SkillCreate();
+    SkillsScroll();
 });
-function PageNavigation(){
-    menuBtn();
-    window.addEventListener('scroll', updateActiveButton);
-}
-function scrollToHome() {
+function RefreshPage() {
     const homeSection = document.getElementById('hom');
     if (homeSection) {
         homeSection.scrollIntoView({ behavior: 'smooth' });
     }
+}
+function PageNavigation(){
+    menuBtn();
+    window.addEventListener('scroll', updateActiveButton);
 }
 function menuBtn() {
     const menuBtn = document.querySelector('#menu-btn');
@@ -61,7 +62,6 @@ function menuBtn() {
         };
     });
 }
-
 function updateActiveButton() {
     const sections = document.querySelectorAll('section');
     const menuBtns = document.querySelectorAll('.menu button');
@@ -83,11 +83,12 @@ function updateActiveButton() {
     });
 }
 
-function component() {
+function SkillCreate() {
     const skills = document.querySelector('#skills');
     const certificates = document.querySelector('#certificates');
     const editors = document.querySelector('#editors');
     const ImgContainer = document.querySelector('#skill-imgs');
+    const saveBox = [];
     skillData.forEach((item) => {
         const li = document.createElement('li');
         const text = document.createElement('p');
@@ -97,19 +98,37 @@ function component() {
         const level = document.createElement('p');
 
         text.innerText = item.name;
-        level.innerText = item.level;
-        bar.style.width = item.level;
+        if(item.level === undefined || item.level === null){
+            level.innerText = '0%';
+            bar.style.width = '0%';
+        }else{
+            level.innerText = item.level;
+            bar.style.width = item.level;
+        }
+
         li.classList.add('box');
         backBar.classList.add('backBar');
         bar.classList.add('bar');
         span.classList.add('level');
-        
+
         li.appendChild(text);
         backBar.appendChild(bar);
         span.appendChild(backBar);
         span.appendChild(level);
         li.appendChild(span);
-        skills.appendChild(li);
+
+        if(item.level >= '50%'){
+            skills.appendChild(li);
+        } else{
+            li.style.backgroundColor = 'rgb(0,0,0,0.8)';
+            li.style.color = 'rgb(0,0,0,0.8)';
+            bar.style.backgroundColor = 'rgb(255,255,255, 0.8)';
+            backBar.style.backgroundColor = 'rgb(0,0,0,0.8)';
+            saveBox.push(li);
+        }
+        saveBox.forEach((item) => {
+            skills.appendChild(item);
+        });
     });
     certificateData.forEach((item) => {
         const li = document.createElement('li');
@@ -124,7 +143,25 @@ function component() {
         editors.appendChild(li);
     });
 }
+function SkillsScroll() {
+    const skill = document.querySelector('#skills');
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+            skill.style.overflowY = 'auto';
+        });
+        item.addEventListener('mouseout', () => {
+            skill.style.overflowY = 'auto';
+        });
+    });
 
+    skill.addEventListener('mouseover', () => {
+        skill.style.overflowY = 'auto';
+    });
+    skill.addEventListener('mouseout', () => {
+        skill.style.overflowY = 'auto';
+    });
+}
 function createSnowflake() {
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
